@@ -75,7 +75,6 @@ You could minify compiled templates using [html-minifier](https://github.com/kan
 removeComments: true
 removeCommentsFromCDATA: true
 removeCDATASectionsFromCDATA: true
-collapseWhitespace: true
 collapseBooleanAttributes: true
 removeAttributeQuotes: true
 useShortDoctype: true
