@@ -19,7 +19,6 @@ module.exports = class JadePages
     removeCommentsFromCDATA: true
     removeCDATASectionsFromCDATA: true
     collapseBooleanAttributes: true
-    removeAttributeQuotes: true
     useShortDoctype: true
     removeEmptyAttributes: true
     removeScriptTypeAttributes: true
