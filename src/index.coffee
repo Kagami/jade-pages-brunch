@@ -52,6 +52,7 @@ module.exports = class JadePages
 
   compile: (data, path, callback) ->
     try
+      @jadeOptions.filename = path
       templateFn = jade.compile(data, @jadeOptions)
       result = templateFn(@jadeLocals)
       if @htmlmin
