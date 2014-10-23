@@ -4,6 +4,7 @@ _ = require "lodash"
 mkdirp = require "mkdirp"
 jade = require "jade"
 minify = require("html-minifier").minify
+progeny = require 'progeny'
 
 module.exports = class JadePages
   brunchPlugin: true
@@ -30,6 +31,9 @@ module.exports = class JadePages
     @pattern = pluginConfig?.pattern
     @publicPath = fspath.resolve(config.paths.public)
     @destinationFn = pluginConfig?.destination ? @DEFAULT_DESTINATION_FN
+
+    @getDependencies = progeny
+      rootPath: config.paths.root
 
     jadeConfig = _.extend({}, pluginConfig?.jade)
     @jadeLocals = jadeConfig.locals
