@@ -66,6 +66,46 @@ exports.config =
 
 Note that in optimize mode `pretty` option is always disabled.
 
+### Jade filters
+
+You could specify Jade filters in the `filters` section. Example:
+```coffeescript
+exports.config =
+  ...
+  plugins:
+    jadePages:
+      filters:
+        php: (text) -> '<?php \n' + text + '\n?>'
+      destination: (path) ->
+        path.replace /^app[\/\\](.*)\.jade$/, "$1"
+```
+`test.php.jade`:
+```jade
+:php
+  // ...
+  $answer = 42;
+  // ...
+
+doctype html
+html(lang="de")
+  body
+    p It's <?= $answer ?>!
+```
+Output (`test.php`):
+```php
+<?php
+// ...
+$answer = 42;
+// ...
+?>
+<!DOCTYPE html>
+<html lang="de">
+  <body>
+    <p>It's <?= $answer ?>!</p>
+  </body>
+</html>
+```
+
 ### HTML minification
 
 You could minify compiled templates using [html-minifier](https://github.com/kangax/html-minifier) by passing following values to the `htmlmin` section:
