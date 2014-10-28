@@ -43,8 +43,9 @@ module.exports = class JadePages
       # We don't want redundant whitespaces for product version, right?
       @jadeOptions.pretty = false
 
-    for filter,fn of pluginConfig?.filters
-      jade.filters[filter] = fn
+    if pluginConfig?.filters?
+      for filter, fn of pluginConfig.filters
+        jade.filters[filter] = fn
 
     # Disable html-minifier by default.
     @htmlmin = false
