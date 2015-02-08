@@ -34,6 +34,7 @@ module.exports = class JadePages
 
     @getDependencies = progeny
       rootPath: config.paths.root
+      reverseArgs: true
 
     jadeConfig = _.extend({}, pluginConfig?.jade)
     @jadeLocals = jadeConfig.locals
