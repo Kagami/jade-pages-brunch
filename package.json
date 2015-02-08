@@ -21,7 +21,7 @@
     "jade": "^1.5.0",
     "lodash": "~2.4.1",
     "mkdirp": "~0.3.5",
-    "progeny": "^0.4.0"
+    "progeny": "^0.5.2"
   },
   "devDependencies": {
     "coffee-script": "~1.6.3"
