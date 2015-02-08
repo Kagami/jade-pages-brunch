@@ -124,7 +124,7 @@ removeStyleLinkTypeAttributes: true
 
 * Specify custom options by passing *Object*; see options description [here](http://perfectionkills.com/experimenting-with-html-minifier/#options).
 
-Note that by default HTML minification is disabled and could be enabled only for optimize mode. Also beware that minification especially with agressive options enabled could broke things.
+Note that by default HTML minification is disabled and could be enabled only for optimize mode. Also beware that minification especially with agressive options enabled could break things.
 
 Example:
 ```coffeescript
