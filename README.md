@@ -142,9 +142,9 @@ exports.config =
 
 ### Why do you need yet another Jade plugin for Brunch?
 
-Because neither [static-jade-brunch](https://github.com/ilkosta/static-jade-brunch) nor [jaded-brunch](https://github.com/monokrome/jaded-brunch) can properly work with another plugin which I use, [jade-ngtemplates-brunch](https://github.com/Kagami/jade-ngtemplates-brunch). For some reason static-jade and jaded always want to generate dynamic templates despite their purposes and enter into a conflict with each other.
+Because [static-jade-brunch](https://github.com/ilkosta/static-jade-brunch) and [jaded-brunch](https://github.com/monokrome/jaded-brunch) don't compatible with another plugin which I use, [jade-ngtemplates-brunch](https://github.com/Kagami/jade-ngtemplates-brunch). They are both using `templates` brunch option and enter into a conflict with each other.
 
-Also I don't want to implement Jade pages functionality inside jade-ngtemplates-brunch (like it's done for example in [jade-angularjs-brunch](https://github.com/GulinSS/jade-angularjs-brunch)) because it's contradict with plugins modularity spirit.
+And I don't want to implement jade-pages functionality as a part of jade-ngtemplates-brunch (like it was done for example in [jade-angularjs-brunch](https://github.com/GulinSS/jade-angularjs-brunch)) because it contradicts with plugins modularity spirit.
 
 ### Then move htmlmin feature inside the separate optimizer plugin.
 
