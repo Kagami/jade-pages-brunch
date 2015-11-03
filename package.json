@@ -1,6 +1,6 @@
 {
   "name": "jade-pages-brunch",
-  "version": "1.8.1",
+  "version": "2.0.0",
   "description": "Adds Jade static pages support to brunch.",
   "main": "./lib/index",
   "scripts": {
