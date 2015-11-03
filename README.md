@@ -11,7 +11,6 @@ Install the plugin via npm with `npm install --save jade-pages-brunch`.
 Or, do manual install:
 
 * Add `"jade-pages-brunch": "x.y.z"` to `package.json` of your brunch app.
-  Pick a plugin version that corresponds to your minor (y) brunch version.
 * If you want to use git version of plugin, add
 `"jade-pages-brunch": "git+https://github.com/Kagami/jade-pages-brunch.git"`.
 
