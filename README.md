@@ -64,8 +64,6 @@ exports.config =
           varname: "123"
 ```
 
-Note that in optimize mode `pretty` option is always disabled.
-
 ### Jade filters
 
 You could specify Jade filters in the `filters` section. Example:
@@ -124,7 +122,7 @@ removeStyleLinkTypeAttributes: true
 
 * Specify custom options by passing *Object*; see options description [here](http://perfectionkills.com/experimenting-with-html-minifier/#options).
 
-Note that by default HTML minification is disabled and could be enabled only for optimize mode. Also beware that minification especially with agressive options enabled could break things.
+Note that by default HTML minification is disabled and using minification with agressive options could break things.
 
 Example:
 ```coffeescript

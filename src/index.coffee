@@ -41,23 +41,21 @@ module.exports = class JadePages
     delete jadeConfig.locals
     @jadeOptions = _.extend(jadeConfig, @DEFAULT_JADE_OPTIONS)
     if optimize
-      # We don't want redundant whitespaces for product version, right?
-      @jadeOptions.pretty = false
+      @jadeOptions.pretty ?= false
 
     if pluginConfig?.filters?
       for filter, fn of pluginConfig.filters
         jade.filters[filter] = fn
 
-    # Disable html-minifier by default.
-    @htmlmin = false
-    if optimize
-      htmlminConfig = pluginConfig?.htmlmin
-      if _.isBoolean(htmlminConfig)
-        @htmlmin = htmlminConfig
-        @htmlminOptions = _.extend({}, @DEFAULT_HTMLMIN_OPTIONS)
-      else if _.isObject(htmlminConfig)
-        @htmlmin = true
-        @htmlminOptions = _.extend({}, htmlminConfig)
+    htmlminConfig = pluginConfig?.htmlmin
+    if _.isBoolean(htmlminConfig)
+      @htmlmin = htmlminConfig
+      @htmlminOptions = _.extend({}, @DEFAULT_HTMLMIN_OPTIONS)
+    else if _.isObject(htmlminConfig)
+      @htmlmin = true
+      @htmlminOptions = _.extend({}, htmlminConfig)
+    else
+      @htmlmin = false
 
   compile: (data, path, callback) ->
     try
